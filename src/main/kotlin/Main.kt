@@ -1,37 +1,39 @@
 fun main() {
-    //Given a string “akirachix”. Write a function that prints out a string composed
-    //of the first, third and fourth characters of the string
-            val school = "akirachix"
+    school()
 
-   println(school[0] +""+school[2] +""+school[3] )
-    println()
+    println(info("Sharoni", 75))
 
-    info("Sharoni", 75)
-    println()
+   println( word("hotelTransilvania"))
+    println ( word("GUI"))
 
-    word("hotelTransilvania")
-    word("GUI")
-    println()
+    println(Bool("Ashley"))
+    Bool("Washington")
+}
+fun school(){
+//A string “akirachix”. Write a function that prints out a string composed
+//of the first, third and fourth characters of the string
+val school = "akirachix"
 
-    Bool("Jenniffer", "Jenniffer")
-    Bool("Washington", "Hudson")
+println(school[0] +""+school[2] +""+school[3] )
+println((school[0].toString()+ school[2]+school[3]))
+println()
 }
 //Write a function that takes in 2 parameters, name and age and returns a
 //String with this structure “Hi, my name is x and I am y years old.” Where x and
 //y are the provided name and age respectively.
 fun info(x: String, y: Int):String{
     var X = "Hi my name is " + x +" "+"and am "+y +"years old"
-    println(X)
-    return X
+       return X
 }
 //Write a function that takes in a String and returns its length
-fun word(t: String){
-    println(t.length)
+fun word(t: String): Int {
+    var length = t.length
+    return length
 }
 //Write a function that takes in a name and prints out “That’s me!” when your
 //name is passed to it, otherwise it prints out “I don’t know who that is”
-fun Bool(name1: String, name2: String){
-    if (name1==name2)
+fun Bool(name1: String){
+    if (name1.equals("Ashley"))
         println("That's me!")
     else
 
